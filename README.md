@@ -1,5 +1,7 @@
 # haversine
 
+[![Build Status](https://travis-ci.org/mamantoha/haversine.svg?branch=master)](https://travis-ci.org/mamantoha/haversine)
+
 Crystal implementation of the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to calculate distances between two points given their latitudes and longitudes.
 
 ## Installation
