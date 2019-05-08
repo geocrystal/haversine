@@ -41,7 +41,7 @@ london = [51.500153, -0.126236]
 new_york = [40.714268, -74.005974]
 
 distance = Haversine.distance(new_york, london)
-distance.to_miles # => 5570474.459662069
+distance.to_kilometers # => 5570.4744596620685
 ```
 
 Also you can compare `Haversine::Distance` objects:
