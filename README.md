@@ -25,6 +25,7 @@ require "haversine"
 Calling `Haversine.distance` with four latitude/longitude coordinates returns a `Haversine::Distance` object which can provide output in kilometers, meters, miles, feet, or nautical miles.
 
 ```crystal
+# Tokyo -> Paris
 distance = Haversine.distance(35.61488, 139.5813, 48.85341, 2.3488)
 
 distance.to_kilometers     # => 9715.470491159029
