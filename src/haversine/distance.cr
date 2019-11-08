@@ -10,26 +10,26 @@ module Haversine
 
     property great_circle_distance
 
-    def initialize(@great_circle_distance : Float64)
+    def initialize(@great_circle_distance : Number)
     end
 
-    def to_kilometers
+    def to_kilometers : Number
       @great_circle_distance * GREAT_CIRCLE_RADIUS_KILOMETERS
     end
 
-    def to_meters
+    def to_meters : Number
       @great_circle_distance * GREAT_CIRCLE_RADIUS_METERS
     end
 
-    def to_miles
+    def to_miles : Number
       @great_circle_distance * GREAT_CIRCLE_RADIUS_MILES
     end
 
-    def to_nautical_miles
+    def to_nautical_miles : Number
       @great_circle_distance * GREAT_CIRCLE_RADIUS_NAUTICAL_MILES
     end
 
-    def to_feet
+    def to_feet : Number
       @great_circle_distance * GREAT_CIRCLE_RADIUS_FEET
     end
 
