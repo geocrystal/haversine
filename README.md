@@ -1,6 +1,8 @@
 # haversine
 
 [![Build Status](https://travis-ci.org/mamantoha/haversine.svg?branch=master)](https://travis-ci.org/mamantoha/haversine)
+[![GitHub release](https://img.shields.io/github/release/mamantoha/haversine.svg)](https://github.com/mamantoha/haversine/releases)
+[![License](https://img.shields.io/github/license/mamantoha/haversine.svg)](https://github.com/mamantoha/haversine/blob/master/LICENSE)
 
 Crystal implementation of the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to calculate distances between two points given their latitudes and longitudes.
 
