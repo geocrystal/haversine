@@ -21,9 +21,9 @@ module Haversine
   end
 
   # ditto
-  def self.distance(cord1 : Array(Number), cord2 : Array(Number)) : Haversine::Distance
-    lat1, lon1 = cord1
-    lat2, lon2 = cord2
+  def self.distance(coord1 : Array(Number), coord2 : Array(Number)) : Haversine::Distance
+    lat1, lon1 = coord1
+    lat2, lon2 = coord2
 
     distance(lat1, lon1, lat2, lon2)
   end
