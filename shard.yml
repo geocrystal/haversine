@@ -1,9 +1,9 @@
 name: haversine
-version: 0.1.0
+version: 0.2.0
 
 authors:
-  - Anton Maminov <anton.linux@gmail.com>
+  - Anton Maminov <anton.maminov@gmail.com>
 
-crystal: 0.28.0
+crystal: 0.31.1
 
 license: MIT
