@@ -1,8 +1,8 @@
 # haversine
 
-[![Build Status](https://travis-ci.org/mamantoha/haversine.svg?branch=master)](https://travis-ci.org/mamantoha/haversine)
-[![GitHub release](https://img.shields.io/github/release/mamantoha/haversine.svg)](https://github.com/mamantoha/haversine/releases)
-[![License](https://img.shields.io/github/license/mamantoha/haversine.svg)](https://github.com/mamantoha/haversine/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/geocrystal/haversine.svg?branch=master)](https://travis-ci.org/geocrystal/haversine)
+[![GitHub release](https://img.shields.io/github/release/geocrystal/haversine.svg)](https://github.com/mamgeocrystalantoha/haversine/releases)
+[![License](https://img.shields.io/github/license/geocrystal/haversine.svg)](https://github.com/geocrystal/haversine/blob/master/LICENSE)
 
 Crystal implementation of the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to calculate distances between two points given their latitudes and longitudes.
 
@@ -13,7 +13,7 @@ Crystal implementation of the [Haversine formula](https://en.wikipedia.org/wiki/
    ```yaml
    dependencies:
      haversine:
-       github: mamantoha/haversine
+       github: geocrystal/haversine
    ```
 
 2. Run `shards install`
@@ -62,7 +62,7 @@ distance1 < distance2 # => true
 
 ## Contributing
 
-1. Fork it (<https://github.com/mamantoha/haversine/fork>)
+1. Fork it (<https://github.com/geocrystal/haversine/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
