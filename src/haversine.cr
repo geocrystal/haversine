@@ -30,6 +30,14 @@ module Haversine
     distance(lat1, lon1, lat2, lon2)
   end
 
+  # :ditto:
+  def distance(coord1 : Tuple(Number, Number), coord2 : Tuple(Number, Number)) : Haversine::Distance
+    lat1, lon1 = coord1
+    lat2, lon2 = coord2
+
+    distance(lat1, lon1, lat2, lon2)
+  end
+
   private def calc(dlat : Number, lat1 : Number, lat2 : Number, dlon : Number) : Number
     (Math.sin(rpd(dlat) / 2)) ** 2 + Math.cos(rpd(lat1)) * Math.cos((rpd(lat2))) * (Math.sin(rpd(dlon) / 2)) ** 2
   end

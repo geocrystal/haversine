@@ -37,11 +37,17 @@ distance.to_feet           # => 31852713.65072557
 distance.to_nautical_miles # => 5242.2799481204265
 ```
 
-If you have latitude/longitude pairs stored in an array, you can alternately provide two arrays when calling `Haversine.distance`:
+If you have latitude/longitude pairs stored in an array or tuple, you can alternately provide two arrays/tuples when calling `Haversine.distance`:
 
 ```crystal
 london = [51.500153, -0.126236]
 new_york = [40.714268, -74.005974]
+
+distance = Haversine.distance(new_york, london)
+distance.to_kilometers # => 5570.4744596620685
+
+london = {51.500153, -0.126236}
+new_york = {40.714268, -74.005974}
 
 distance = Haversine.distance(new_york, london)
 distance.to_kilometers # => 5570.4744596620685
