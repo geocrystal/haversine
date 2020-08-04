@@ -1,6 +1,8 @@
 # haversine
 
+![Crystal CI](https://github.com/geocrystal/haversine/workflows/Crystal%20CI/badge.svg?branch=master)
 [![GitHub release](https://img.shields.io/github/release/geocrystal/haversine.svg)](https://github.com/mamgeocrystalantoha/haversine/releases)
+[![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://geocrystal.github.io/haversine/)
 [![License](https://img.shields.io/github/license/geocrystal/haversine.svg)](https://github.com/geocrystal/haversine/blob/master/LICENSE)
 
 Crystal implementation of the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula) to calculate distances between two points given their latitudes and longitudes.
