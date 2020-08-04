@@ -1,6 +1,5 @@
 # haversine
 
-[![Build Status](https://travis-ci.org/geocrystal/haversine.svg?branch=master)](https://travis-ci.org/geocrystal/haversine)
 [![GitHub release](https://img.shields.io/github/release/geocrystal/haversine.svg)](https://github.com/mamgeocrystalantoha/haversine/releases)
 [![License](https://img.shields.io/github/license/geocrystal/haversine.svg)](https://github.com/geocrystal/haversine/blob/master/LICENSE)
 
