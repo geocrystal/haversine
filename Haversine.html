@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="0.3.1">
+<meta name="crystal_docs.project_name" content="haversine">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="haversine">
+  <title>Haversine - haversine 0.3.1</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          haversine
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.3.1
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="haversine/Haversine" data-name="haversine">
+      <a href="Haversine.html">Haversine</a>
+      
+        <ul>
+  
+  <li class=" " data-id="haversine/Haversine/Distance" data-name="haversine::distance">
+      <a href="Haversine/Distance.html">Distance</a>
+      
+    </li>
+  
+  <li class=" " data-id="haversine/Haversine/Number" data-name="haversine::number">
+      <a href="Haversine/Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Haversine
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The haversine formula determines the great-circle distance between two points on a sphere
+given their latitudes and longitudes.</p>
+
+<p>https://en.wikipedia.org/wiki/Haversine_formula</p>
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="Haversine.html">Haversine</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="RAD_PER_DEG">
+        <strong>RAD_PER_DEG</strong> = <code><span class="t">Math</span><span class="t">::</span><span class="t">PI</span> <span class="o">/</span> <span class="n">180</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code>{{ (<span class="s">`shards version /__w/haversine/haversine/src/haversine`</span>).chomp.stringify }}</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#distance(lat1:Number,lon1:Number,lat2:Number,lon2:Number):Haversine::Distance-instance-method" class="signature"><strong>#distance</strong>(lat1 : Number, lon1 : Number, lat2 : Number, lon2 : Number) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Calculates the haversine distance between two locations using latitude and longitude.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance(coord1:Array(Number),coord2:Array(Number)):Haversine::Distance-instance-method" class="signature"><strong>#distance</strong>(coord1 : Array(Number), coord2 : Array(Number)) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Calculates the haversine distance between two locations using latitude and longitude.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance(coord1:Tuple(Number,Number),coord2:Tuple(Number,Number)):Haversine::Distance-instance-method" class="signature"><strong>#distance</strong>(coord1 : Tuple(Number, Number), coord2 : Tuple(Number, Number)) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Calculates the haversine distance between two locations using latitude and longitude.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="distance(lat1:Number,lon1:Number,lat2:Number,lon2:Number):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong>(lat1 : <a href="Haversine/Number.html">Number</a>, lon1 : <a href="Haversine/Number.html">Number</a>, lat2 : <a href="Haversine/Number.html">Number</a>, lon2 : <a href="Haversine/Number.html">Number</a>) : <a href="Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#distance(lat1:Number,lon1:Number,lat2:Number,lon2:Number):Haversine::Distance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculates the haversine distance between two locations using latitude and longitude.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance(coord1:Array(Number),coord2:Array(Number)):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong>(coord1 : Array(<a href="Haversine/Number.html">Number</a>), coord2 : Array(<a href="Haversine/Number.html">Number</a>)) : <a href="Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#distance(coord1:Array(Number),coord2:Array(Number)):Haversine::Distance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculates the haversine distance between two locations using latitude and longitude.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance(coord1:Tuple(Number,Number),coord2:Tuple(Number,Number)):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong>(coord1 : Tuple(<a href="Haversine/Number.html">Number</a>, <a href="Haversine/Number.html">Number</a>), coord2 : Tuple(<a href="Haversine/Number.html">Number</a>, <a href="Haversine/Number.html">Number</a>)) : <a href="Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#distance(coord1:Tuple(Number,Number),coord2:Tuple(Number,Number)):Haversine::Distance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculates the haversine distance between two locations using latitude and longitude.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
