@@ -27,6 +27,14 @@ require "haversine"
 
 Calling `Haversine.distance` with four latitude/longitude coordinates returns a `Haversine::Distance` object which can provide output in kilometers, meters, miles, feet, or nautical miles.
 
+Each "coordinates" member **must** be a pair of coordinates - `latitude` and `longitude`.
+
+`Haversine.distance` accepts of either:
+
+- `Haversine.distance(lat1, lon1, lat2, lon2)`
+- `Haversine.distance({lat1, lon1}, {lat2, lon2})`
+- `Haversine.distance([lat1, lon1], [lat2, lon2])`
+
 ```crystal
 # Tokyo -> Paris
 distance = Haversine.distance(35.61488, 139.5813, 48.85341, 2.3488)
