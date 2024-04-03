@@ -25,10 +25,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Crystal Ameba Linter
-        id: crystal-ameba
-        uses: crystal-ameba/github-action@v0.9.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./bin/ameba
 
   test:
     strategy:
@@ -37,7 +34,6 @@ jobs:
         include:
           - {os: ubuntu-latest, crystal: latest}
           - {os: ubuntu-latest, crystal: nightly}
-          - {os: macos-latest}
           - {os: macos-14}
     runs-on: ${{ matrix.os }}
     steps:
