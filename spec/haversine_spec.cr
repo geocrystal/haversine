@@ -13,9 +13,9 @@ describe Haversine do
     end
 
     describe "calculates the distance between the provided lat/lon pairs" do
-      it { Haversine.distance(0, 0, 0, 0).great_circle_distance.should eq(0) }
-      it { Haversine.distance([0.0, 0.0], [0.0, 0.0]).great_circle_distance.should eq(0) }
-      it { Haversine.distance({0.0, 0.0}, {0.0, 0.0}).great_circle_distance.should eq(0) }
+      it { Haversine.distance(0, 0, 0, 0).distance.should eq(0) }
+      it { Haversine.distance([0.0, 0.0], [0.0, 0.0]).distance.should eq(0) }
+      it { Haversine.distance({0.0, 0.0}, {0.0, 0.0}).distance.should eq(0) }
     end
 
     describe "computes distances correctly" do
@@ -24,11 +24,11 @@ describe Haversine do
 
       dist = Haversine.distance(new_york, london)
 
-      it { dist.to_kilometers.should eq(5570.4744596620685) }
-      it { dist.to_meters.should eq(5570474.459662069) }
-      it { dist.to_miles.should eq(3458.9227691764468) }
-      it { dist.to_nautical_miles.should eq(3005.720267276497) }
-      it { dist.to_feet.should eq(18263112.22125164) }
+      it { dist.to_kilometers.should eq(5570.482153929098) }
+      it { dist.to_meters.should eq(5570482.153929098) }
+      it { dist.to_miles.should eq(3461.3371373237155) }
+      it { dist.to_nautical_miles.should eq(3007.8197375427094) }
+      it { dist.to_feet.should eq(18275860.669896744) }
     end
   end
 end
