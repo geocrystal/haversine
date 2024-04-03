@@ -64,6 +64,8 @@ distance.to_kilometers # => 5570.482153929098
 
 ![haversine](/assets/readme_image.png)
 
+<https://www.movable-type.co.uk/scripts/latlong.html>
+
 Also you can compare `Haversine::Distance` objects:
 
 ```crystal
