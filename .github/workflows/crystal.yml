@@ -24,6 +24,8 @@ jobs:
         uses: crystal-lang/install-crystal@v1
       - name: Check out repository code
         uses: actions/checkout@v4
+      - name: Install dependencies
+        run: shards install
       - name: Crystal Ameba Linter
         run: ./bin/ameba
 
