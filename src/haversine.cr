@@ -32,10 +32,15 @@ module Haversine
 
   # Calculates the haversine distance between two locations using latitude and longitude.
   def distance(lat1 : Number, lon1 : Number, lat2 : Number, lon2 : Number) : Haversine::Distance
-    dlon = lon2 - lon1
-    dlat = lat2 - lat1
+    dlon = to_radians(lon2 - lon1)
+    dlat = to_radians(lat2 - lat1)
+    lat1 = to_radians(lat1)
+    lat2 = to_radians(lat2)
 
-    a = calc(dlat, lat1, lat2, dlon)
+    a =
+      Math.sin(dlat / 2) ** 2 +
+        (Math.sin(dlon / 2) ** 2) * Math.cos(lat1) * Math.cos(lat2)
+
     c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
 
     Haversine::Distance.new(c)
@@ -97,11 +102,6 @@ module Haversine
     latitude, longitude = coord
 
     destination(latitude, longitude, distance, bearing, unit)
-  end
-
-  private def calc(dlat : Number, lat1 : Number, lat2 : Number, dlon : Number) : Number
-    Math.sin(to_radians(dlat) / 2) ** 2 +
-      Math.cos(to_radians(lat1)) * Math.cos(to_radians(lat2)) * (Math.sin(to_radians(dlon) / 2)) ** 2
   end
 
   private def to_radians(degrees : Number) : Number
