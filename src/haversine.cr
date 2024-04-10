@@ -30,8 +30,6 @@ module Haversine
 
   alias Number = Int32 | Float32 | Float64
 
-  RAD_PER_DEG = Math::PI / 180
-
   # Calculates the haversine distance between two locations using latitude and longitude.
   def distance(lat1 : Number, lon1 : Number, lat2 : Number, lon2 : Number) : Haversine::Distance
     dlon = lon2 - lon1
@@ -102,18 +100,15 @@ module Haversine
   end
 
   private def calc(dlat : Number, lat1 : Number, lat2 : Number, dlon : Number) : Number
-    (Math.sin(rpd(dlat) / 2)) ** 2 + Math.cos(rpd(lat1)) * Math.cos((rpd(lat2))) * (Math.sin(rpd(dlon) / 2)) ** 2
+    Math.sin(to_radians(dlat) / 2) ** 2 +
+      Math.cos(to_radians(lat1)) * Math.cos(to_radians(lat2)) * (Math.sin(to_radians(dlon) / 2)) ** 2
   end
 
-  private def rpd(num : Number) : Number
-    num * RAD_PER_DEG
-  end
-
-  private def to_radians(degrees : Float64) : Float64
+  private def to_radians(degrees : Number) : Number
     degrees * Math::PI / 180.0
   end
 
-  private def to_degrees(radians : Float64) : Float64
+  private def to_degrees(radians : Number) : Number
     radians * 180.0 / Math::PI
   end
 end
