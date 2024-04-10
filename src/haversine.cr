@@ -63,7 +63,7 @@ module Haversine
   # given a `distance` factor in `Haversine::FACTORS`; and `bearing` in degrees(ranging from -180 to 180).
   #
   # https://github.com/Turfjs/turf/blob/master/packages/turf-destination/index.ts
-  def destination(latitude : Number, longitude : Number, distance : Float64, bearing : Float64, unit : Symbol = :kilometers) : Tuple(Float64, Float64)
+  def destination(latitude : Number, longitude : Number, distance : Number, bearing : Number, unit : Symbol = :kilometers) : Tuple(Float64, Float64)
     factor = FACTORS[unit]
 
     radians = distance / factor
@@ -88,14 +88,14 @@ module Haversine
   end
 
   # :ditto:
-  def destination(coord : Array(Number), distance : Float64, bearing : Float64, unit : Symbol = :kilometers) : Tuple(Float64, Float64)
+  def destination(coord : Array(Number), distance : Number, bearing : Number, unit : Symbol = :kilometers) : Tuple(Float64, Float64)
     latitude, longitude = coord
 
     destination(latitude, longitude, distance, bearing, unit)
   end
 
   # :ditto:
-  def destination(coord : Tuple(Number, Number), distance : Float64, bearing : Float64, unit : Symbol = :kilometers) : Tuple(Float64, Float64)
+  def destination(coord : Tuple(Number, Number), distance : Number, bearing : Number, unit : Symbol = :kilometers) : Tuple(Float64, Float64)
     latitude, longitude = coord
 
     destination(latitude, longitude, distance, bearing, unit)
