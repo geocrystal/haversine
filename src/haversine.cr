@@ -59,10 +59,8 @@ module Haversine
     distance(lat1, lon1, lat2, lon2)
   end
 
-  # Takes an original point by `latitude`, `longitude` and calculates the location of a destination point
-  # given a `distance` factor in degrees, radians, miles, or kilometers; and `bearing` in degrees.
-  #
-  # `bearing` ranging from -180 to 180
+  # Takes the staring point by `latitude`, `longitude` and calculates the location of a destination point
+  # given a `distance` factor in `Haversine::FACTORS`; and `bearing` in degrees(ranging from -180 to 180).
   #
   # https://github.com/Turfjs/turf/blob/master/packages/turf-destination/index.ts
   def destination(latitude : Number, longitude : Number, distance : Float64, bearing : Float64, unit : Symbol = :kilometers) : Tuple(Float64, Float64)

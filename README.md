@@ -25,6 +25,8 @@ Crystal implementation of the [Haversine formula](https://en.wikipedia.org/wiki/
 require "haversine"
 ```
 
+### Distance
+
 Calling `Haversine.distance` with four latitude/longitude coordinates returns a `Haversine::Distance` object which can provide output in kilometers, meters, miles, feet, or nautical miles.
 
 Each "coordinates" member **must** be a pair of coordinates - `latitude` and `longitude`.
@@ -77,6 +79,16 @@ distance1 = Haversine.distance(london, new_york)
 distance2 = Haversine.distance(london, shanghai)
 
 distance1 < distance2 # => true
+```
+
+### Destination
+
+Takes the starting point by `latitude`, `longitude` and calculates the location of a destination point
+given a `distance` factor in degrees, radians, miles, or kilometers; and `bearing` in degrees.
+
+```crystal
+Haversine.destination(39, -75, 5000, 90, :kilometers)
+# => {26.440010707631124, -22.885355549364313}
 ```
 
 ## Contributing
