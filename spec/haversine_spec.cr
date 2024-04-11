@@ -31,4 +31,12 @@ describe Haversine do
       it { dist.to_feet.should eq(18275860.669896744) }
     end
   end
+
+  describe ".destination" do
+    describe "calculates the location of a destination point" do
+      it { Haversine.destination(39, -75, 5000, 90, :kilometers).should eq({26.440010707631124, -22.885355549364313}) }
+      it { Haversine.destination([39, -75], 5000, 90, :kilometers).should eq({26.440010707631124, -22.885355549364313}) }
+      it { Haversine.destination({39, -75}, 5000, 90, :kilometers).should eq({26.440010707631124, -22.885355549364313}) }
+    end
+  end
 end
