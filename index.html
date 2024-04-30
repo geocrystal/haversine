@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="crystal_docs.project_version" content="0.5.0">
+<meta name="crystal_docs.project_name" content="haversine">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="haversine">
+  <title>haversine 0.5.0</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          haversine
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.5.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="haversine/Haversine" data-name="haversine">
+      <a href="Haversine.html">Haversine</a>
+      
+        <ul>
+  
+  <li class=" " data-id="haversine/Haversine/Distance" data-name="haversine::distance">
+      <a href="Haversine/Distance.html">Distance</a>
+      
+    </li>
+  
+  <li class=" " data-id="haversine/Haversine/Number" data-name="haversine::number">
+      <a href="Haversine/Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1><a id="haversine" class="anchor" href="#haversine">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>haversine</h1>
+<p><a href="https://github.com/geocrystal/haversine/actions/workflows/crystal.yml"><img src="https://github.com/geocrystal/haversine/actions/workflows/crystal.yml/badge.svg" alt="Crystal CI" /></a>
+<a href="https://github.com/mamgeocrystalantoha/haversine/releases"><img src="https://img.shields.io/github/release/geocrystal/haversine.svg" alt="GitHub release" /></a>
+<a href="https://geocrystal.github.io/haversine/"><img src="https://img.shields.io/badge/docs-available-brightgreen.svg" alt="Docs" /></a>
+<a href="https://github.com/geocrystal/haversine/blob/master/LICENSE"><img src="https://img.shields.io/github/license/geocrystal/haversine.svg" alt="License" /></a></p>
+<p>Crystal implementation of the <a href="https://en.wikipedia.org/wiki/Haversine_formula">Haversine formula</a> to calculate distances between two points given their latitudes and longitudes.</p>
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
+<ol>
+<li>
+<p>Add the dependency to your <code>shard.yml</code>:</p>
+<pre><code class="language-yaml">dependencies:
+  haversine:
+    github: geocrystal/haversine</code></pre>
+</li>
+<li>
+<p>Run <code>shards install</code></p>
+</li>
+</ol>
+<h2><a id="usage" class="anchor" href="#usage">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Usage</h2>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;haversine&quot;</span></code></pre>
+<h3><a id="distance" class="anchor" href="#distance">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Distance</h3>
+<p>Calling <code>Haversine.distance</code> with four latitude/longitude coordinates returns a <code><a href="Haversine/Distance.html">Haversine::Distance</a></code> object which can provide output in kilometers, meters, miles, feet, or nautical miles.</p>
+<p>Each &quot;coordinates&quot; member <strong>must</strong> be a pair of coordinates - <code>latitude</code> and <code>longitude</code>.</p>
+<p><code>Haversine.distance</code> accepts of either:</p>
+<ul>
+<li><code>Haversine.distance(lat1, lon1, lat2, lon2)</code></li>
+<li><code>Haversine.distance({lat1, lon1}, {lat2, lon2})</code></li>
+<li><code>Haversine.distance([lat1, lon1], [lat2, lon2])</code></li>
+</ul>
+<pre><code class="language-crystal"><span class="c"># Tokyo -&gt; Paris</span>
+distance <span class="o">=</span> <span class="t">Haversine</span>.distance(<span class="n">35.61488</span>, <span class="n">139.5813</span>, <span class="n">48.85341</span>, <span class="n">2.3488</span>)
+
+distance.to_kilometers     <span class="c"># =&gt; 9715.470491159029</span>
+distance.to_meters         <span class="c"># =&gt; 9715470.491159027</span>
+distance.to_miles          <span class="c"># =&gt; 6032.710918698025</span>
+distance.to_feet           <span class="c"># =&gt; 31852713.65072557</span>
+distance.to_nautical_miles <span class="c"># =&gt; 5242.2799481204265</span></code></pre>
+<p>If you have latitude/longitude pairs stored in an array or tuple, you can alternately provide two arrays/tuples when calling <code>Haversine.distance</code>:</p>
+<pre><code class="language-crystal">london <span class="o">=</span> [<span class="n">51.500153</span>, <span class="n">-0.126236</span>]
+new_york <span class="o">=</span> [<span class="n">40.714268</span>, <span class="n">-74.005974</span>]
+
+distance <span class="o">=</span> <span class="t">Haversine</span>.distance(new_york, london)
+distance.to_kilometers <span class="c"># =&gt; 5570.482153929098</span>
+
+london <span class="o">=</span> {<span class="n">51.500153</span>, <span class="n">-0.126236</span>}
+new_york <span class="o">=</span> {<span class="n">40.714268</span>, <span class="n">-74.005974</span>}
+
+distance <span class="o">=</span> <span class="t">Haversine</span>.distance(new_york, london)
+distance.to_kilometers <span class="c"># =&gt; 5570.482153929098</span></code></pre>
+<p><img src="/assets/readme_image.png" alt="haversine" /></p>
+<p><a href="https://www.movable-type.co.uk/scripts/latlong.html">https://www.movable-type.co.uk/scripts/latlong.html</a></p>
+<p>Also you can compare <code><a href="Haversine/Distance.html">Haversine::Distance</a></code> objects:</p>
+<pre><code class="language-crystal">london <span class="o">=</span> [<span class="n">51.500153</span>, <span class="n">-0.126236</span>]
+new_york <span class="o">=</span> [<span class="n">40.714268</span>, <span class="n">-74.005974</span>]
+shanghai <span class="o">=</span> [<span class="n">31.222220</span>, <span class="n">121.458060</span>]
+
+distance1 <span class="o">=</span> <span class="t">Haversine</span>.distance(london, new_york)
+distance2 <span class="o">=</span> <span class="t">Haversine</span>.distance(london, shanghai)
+
+distance1 <span class="o">&lt;</span> distance2 <span class="c"># =&gt; true</span></code></pre>
+<h3><a id="destination" class="anchor" href="#destination">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Destination</h3>
+<p>Takes the starting point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point
+given a <code>distance</code> factor in degrees, radians, miles, or kilometers; and <code>bearing</code> in degrees.</p>
+<pre><code class="language-crystal"><span class="t">Haversine</span>.destination(<span class="n">39</span>, <span class="n">-75</span>, <span class="n">5000</span>, <span class="n">90</span>, <span class="n">:kilometers</span>)
+<span class="c"># =&gt; {26.440010707631124, -22.885355549364313}</span></code></pre>
+<h2><a id="contributing" class="anchor" href="#contributing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributing</h2>
+<ol>
+<li>Fork it (<a href="https://github.com/geocrystal/haversine/fork">https://github.com/geocrystal/haversine/fork</a>)</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+<h2><a id="contributors" class="anchor" href="#contributors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributors</h2>
+<ul>
+<li><a href="https://github.com/mamantoha">Anton Maminov</a> - creator and maintainer</li>
+</ul>
+</div>
+</body>
+</html>

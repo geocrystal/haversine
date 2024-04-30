@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="crystal_docs.project_version" content="0.5.0">
+<meta name="crystal_docs.project_name" content="haversine">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="haversine">
+  <title>Haversine::Distance - haversine 0.5.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          haversine
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.5.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="haversine/Haversine" data-name="haversine">
+      <a href="../Haversine.html">Haversine</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="haversine/Haversine/Distance" data-name="haversine::distance">
+      <a href="../Haversine/Distance.html">Distance</a>
+      
+    </li>
+  
+  <li class=" " data-id="haversine/Haversine/Number" data-name="haversine::number">
+      <a href="../Haversine/Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Haversine::<wbr>Distance
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Haversine/Distance.html">Haversine::Distance</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">Comparable(<a href="../Haversine/Distance.html">Haversine::Distance</a>)</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      haversine/distance.cr
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28distance%3ANumber%29-class-method" class="signature"><strong>.new</strong>(distance : Number)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#zero%3AHaversine%3A%3ADistance-class-method" class="signature"><strong>.zero</strong> : Haversine::Distance</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%2B%28other%3AHaversine%3A%3ADistance%29%3AHaversine%3A%3ADistance-instance-method" class="signature"><strong>#+</strong>(other : Haversine::Distance) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Adds the value of <code>self</code> to <em>other</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#-%28other%3AHaversine%3A%3ADistance%29%3AHaversine%3A%3ADistance-instance-method" class="signature"><strong>#-</strong>(other : Haversine::Distance) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Removes the value of <em>other</em> from <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%3C%3D%3E%28other%3AHaversine%3A%3ADistance%29-instance-method" class="signature"><strong>#<=></strong>(other : Haversine::Distance)</a>
+        
+          <div class="summary"><p>The comparison operator.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance%3AFloat32%7CFloat64%7CInt32-instance-method" class="signature"><strong>#distance</strong> : Float32 | Float64 | Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance%3D%28distance%3AFloat32%7CFloat64%7CInt32%29-instance-method" class="signature"><strong>#distance=</strong>(distance : Float32 | Float64 | Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_centimeters%3ANumber-instance-method" class="signature"><strong>#to_centimeters</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_centimetres%3ANumber-instance-method" class="signature"><strong>#to_centimetres</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_degrees%3ANumber-instance-method" class="signature"><strong>#to_degrees</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_feet%3ANumber-instance-method" class="signature"><strong>#to_feet</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_inches%3ANumber-instance-method" class="signature"><strong>#to_inches</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_kilometers%3ANumber-instance-method" class="signature"><strong>#to_kilometers</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_kilometres%3ANumber-instance-method" class="signature"><strong>#to_kilometres</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_meters%3ANumber-instance-method" class="signature"><strong>#to_meters</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_metres%3ANumber-instance-method" class="signature"><strong>#to_metres</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_miles%3ANumber-instance-method" class="signature"><strong>#to_miles</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_millimeters%3ANumber-instance-method" class="signature"><strong>#to_millimeters</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_millimetres%3ANumber-instance-method" class="signature"><strong>#to_millimetres</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_nautical_miles%3ANumber-instance-method" class="signature"><strong>#to_nautical_miles</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_radians%3ANumber-instance-method" class="signature"><strong>#to_radians</strong> : Number</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_yards%3ANumber-instance-method" class="signature"><strong>#to_yards</strong> : Number</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(distance:Number)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(distance : <a href="../Haversine/Number.html">Number</a>)
+
+        <a class="method-permalink" href="#new%28distance%3ANumber%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="zero:Haversine::Distance-class-method">
+      <div class="signature">
+        
+        def self.<strong>zero</strong> : <a href="../Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#zero%3AHaversine%3A%3ADistance-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="+(other:Haversine::Distance):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>+</strong>(other : <a href="../Haversine/Distance.html">Haversine::Distance</a>) : <a href="../Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#%2B%28other%3AHaversine%3A%3ADistance%29%3AHaversine%3A%3ADistance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Adds the value of <code>self</code> to <em>other</em>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="-(other:Haversine::Distance):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>-</strong>(other : <a href="../Haversine/Distance.html">Haversine::Distance</a>) : <a href="../Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#-%28other%3AHaversine%3A%3ADistance%29%3AHaversine%3A%3ADistance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Removes the value of <em>other</em> from <code>self</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="&lt;=&gt;(other:Haversine::Distance)-instance-method">
+      <div class="signature">
+        
+        def <strong><=></strong>(other : <a href="../Haversine/Distance.html">Haversine::Distance</a>)
+
+        <a class="method-permalink" href="#%3C%3D%3E%28other%3AHaversine%3A%3ADistance%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module Comparable(<a href="../Haversine/Distance.html">Haversine::Distance</a>)
+            </div>
+          
+          <p>The comparison operator. Returns <code>0</code> if the two objects are equal,
+a negative number if this object is considered less than <em>other</em>,
+a positive number if this object is considered greater than <em>other</em>,
+or <code>nil</code> if the two objects are not comparable.</p>
+<p>Subclasses define this method to provide class-specific ordering.</p>
+<p>The comparison operator is usually used to sort values:</p>
+<pre><code class="language-crystal"><span class="c"># Sort in a descending way:</span>
+[<span class="n">3</span>, <span class="n">1</span>, <span class="n">2</span>].sort { <span class="o">|</span>x, y<span class="o">|</span> y <span class="o">&lt;=&gt;</span> x } <span class="c"># =&gt; [3, 2, 1]</span>
+
+<span class="c"># Sort in an ascending way:</span>
+[<span class="n">3</span>, <span class="n">1</span>, <span class="n">2</span>].sort { <span class="o">|</span>x, y<span class="o">|</span> x <span class="o">&lt;=&gt;</span> y } <span class="c"># =&gt; [1, 2, 3]</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance:Float32|Float64|Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong> : Float32 | Float64 | Int32
+
+        <a class="method-permalink" href="#distance%3AFloat32%7CFloat64%7CInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance=(distance:Float32|Float64|Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>distance=</strong>(distance : Float32 | Float64 | Int32)
+
+        <a class="method-permalink" href="#distance%3D%28distance%3AFloat32%7CFloat64%7CInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_centimeters:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_centimeters</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_centimeters%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_centimetres:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_centimetres</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_centimetres%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_degrees:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_degrees</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_degrees%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_feet:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_feet</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_feet%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_inches:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_inches</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_inches%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_kilometers:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_kilometers</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_kilometers%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_kilometres:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_kilometres</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_kilometres%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_meters:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_meters</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_meters%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_metres:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_metres</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_metres%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_miles:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_miles</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_miles%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_millimeters:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_millimeters</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_millimeters%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_millimetres:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_millimetres</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_millimetres%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_nautical_miles:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_nautical_miles</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_nautical_miles%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_radians:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_radians</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_radians%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_yards:Number-instance-method">
+      <div class="signature">
+        
+        def <strong>to_yards</strong> : <a href="../Haversine/Number.html">Number</a>
+
+        <a class="method-permalink" href="#to_yards%3ANumber-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

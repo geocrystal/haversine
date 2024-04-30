@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.11.2">
+<meta name="crystal_docs.project_version" content="0.5.0">
+<meta name="crystal_docs.project_name" content="haversine">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="haversine">
+  <title>Haversine - haversine 0.5.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          haversine
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.5.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="haversine/Haversine" data-name="haversine">
+      <a href="Haversine.html">Haversine</a>
+      
+        <ul>
+  
+  <li class=" " data-id="haversine/Haversine/Distance" data-name="haversine::distance">
+      <a href="Haversine/Distance.html">Distance</a>
+      
+    </li>
+  
+  <li class=" " data-id="haversine/Haversine/Number" data-name="haversine::number">
+      <a href="Haversine/Number.html">Number</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Haversine
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The haversine formula determines the great-circle distance between two points on a sphere
+given their latitudes and longitudes.</p>
+<p>https://en.wikipedia.org/wiki/Haversine_formula</p>
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="Haversine.html">Haversine</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      haversine.cr
+    
+    <br/>
+  
+    
+      haversine/distance.cr
+    
+    <br/>
+  
+    
+      haversine/version.cr
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="EARTH_RADIUS">
+        <strong>EARTH_RADIUS</strong> = <code><span class="n">6371008.8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FACTORS">
+        <strong>FACTORS</strong> = <code>{centimeters: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">100</span>, centimetres: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">100</span>, degrees: <span class="n">360</span> <span class="o">/</span> (<span class="n">2</span> <span class="o">*</span> <span class="t">Math</span><span class="t">::</span><span class="t">PI</span>), feet: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">3.28084</span>, inches: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">39.37</span>, kilometers: <span class="t">EARTH_RADIUS</span> <span class="o">/</span> <span class="n">1000</span>, kilometres: <span class="t">EARTH_RADIUS</span> <span class="o">/</span> <span class="n">1000</span>, meters: <span class="t">EARTH_RADIUS</span>, metres: <span class="t">EARTH_RADIUS</span>, miles: <span class="t">EARTH_RADIUS</span> <span class="o">/</span> <span class="n">1609.344</span>, millimeters: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">1000</span>, millimetres: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">1000</span>, nautical_miles: <span class="t">EARTH_RADIUS</span> <span class="o">/</span> <span class="n">1852</span>, radians: <span class="n">1</span>, yards: <span class="t">EARTH_RADIUS</span> <span class="o">*</span> <span class="n">1.0936</span>}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Unit of measurement factors using a spherical (non-ellipsoid) earth radius.</p>
+<p>Keys are the name of the unit, values are the number of that unit in a single radians</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="o">{{</span> (<span class="s">`shards version /__w/haversine/haversine/src/haversine`</span>).chomp.stringify }}</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#destination%28latitude%3ANumber%2Clongitude%3ANumber%2Cdistance%3ANumber%2Cbearing%3ANumber%2Cunit%3ASymbol%3D%3Akilometers%29%3ATuple%28Float64%2CFloat64%29-instance-method" class="signature"><strong>#destination</strong>(latitude : Number, longitude : Number, distance : Number, bearing : Number, unit : Symbol = <span class="n">:kilometers</span>) : Tuple(Float64, Float64)</a>
+        
+          <div class="summary"><p>Takes the staring point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point given a <code><a href="Haversine.html#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#distance</a></code> factor in <code><a href="Haversine.html#FACTORS">Haversine::FACTORS</a></code>; and <code>bearing</code> in degrees(ranging from -180 to 180).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#destination%28coord%3AArray%28Number%29%2Cdistance%3ANumber%2Cbearing%3ANumber%2Cunit%3ASymbol%3D%3Akilometers%29%3ATuple%28Float64%2CFloat64%29-instance-method" class="signature"><strong>#destination</strong>(coord : Array(Number), distance : Number, bearing : Number, unit : Symbol = <span class="n">:kilometers</span>) : Tuple(Float64, Float64)</a>
+        
+          <div class="summary"><p>Takes the staring point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point given a <code><a href="Haversine.html#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#distance</a></code> factor in <code><a href="Haversine.html#FACTORS">Haversine::FACTORS</a></code>; and <code>bearing</code> in degrees(ranging from -180 to 180).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#destination%28coord%3ATuple%28Number%2CNumber%29%2Cdistance%3ANumber%2Cbearing%3ANumber%2Cunit%3ASymbol%3D%3Akilometers%29%3ATuple%28Float64%2CFloat64%29-instance-method" class="signature"><strong>#destination</strong>(coord : Tuple(Number, Number), distance : Number, bearing : Number, unit : Symbol = <span class="n">:kilometers</span>) : Tuple(Float64, Float64)</a>
+        
+          <div class="summary"><p>Takes the staring point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point given a <code><a href="Haversine.html#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#distance</a></code> factor in <code><a href="Haversine.html#FACTORS">Haversine::FACTORS</a></code>; and <code>bearing</code> in degrees(ranging from -180 to 180).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method" class="signature"><strong>#distance</strong>(lat1 : Number, lon1 : Number, lat2 : Number, lon2 : Number) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Calculates the haversine distance between two locations using latitude and longitude.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance%28coord1%3AArray%28Number%29%2Ccoord2%3AArray%28Number%29%29%3AHaversine%3A%3ADistance-instance-method" class="signature"><strong>#distance</strong>(coord1 : Array(Number), coord2 : Array(Number)) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Calculates the haversine distance between two locations using latitude and longitude.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#distance%28coord1%3ATuple%28Number%2CNumber%29%2Ccoord2%3ATuple%28Number%2CNumber%29%29%3AHaversine%3A%3ADistance-instance-method" class="signature"><strong>#distance</strong>(coord1 : Tuple(Number, Number), coord2 : Tuple(Number, Number)) : Haversine::Distance</a>
+        
+          <div class="summary"><p>Calculates the haversine distance between two locations using latitude and longitude.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="destination(latitude:Number,longitude:Number,distance:Number,bearing:Number,unit:Symbol=:kilometers):Tuple(Float64,Float64)-instance-method">
+      <div class="signature">
+        
+        def <strong>destination</strong>(latitude : <a href="Haversine/Number.html">Number</a>, longitude : <a href="Haversine/Number.html">Number</a>, distance : <a href="Haversine/Number.html">Number</a>, bearing : <a href="Haversine/Number.html">Number</a>, unit : Symbol = <span class="n">:kilometers</span>) : Tuple(Float64, Float64)
+
+        <a class="method-permalink" href="#destination%28latitude%3ANumber%2Clongitude%3ANumber%2Cdistance%3ANumber%2Cbearing%3ANumber%2Cunit%3ASymbol%3D%3Akilometers%29%3ATuple%28Float64%2CFloat64%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Takes the staring point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point
+given a <code><a href="Haversine.html#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#distance</a></code> factor in <code><a href="Haversine.html#FACTORS">Haversine::FACTORS</a></code>; and <code>bearing</code> in degrees(ranging from -180 to 180).</p>
+<p>https://github.com/Turfjs/turf/blob/master/packages/turf-destination/index.ts</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="destination(coord:Array(Number),distance:Number,bearing:Number,unit:Symbol=:kilometers):Tuple(Float64,Float64)-instance-method">
+      <div class="signature">
+        
+        def <strong>destination</strong>(coord : Array(<a href="Haversine/Number.html">Number</a>), distance : <a href="Haversine/Number.html">Number</a>, bearing : <a href="Haversine/Number.html">Number</a>, unit : Symbol = <span class="n">:kilometers</span>) : Tuple(Float64, Float64)
+
+        <a class="method-permalink" href="#destination%28coord%3AArray%28Number%29%2Cdistance%3ANumber%2Cbearing%3ANumber%2Cunit%3ASymbol%3D%3Akilometers%29%3ATuple%28Float64%2CFloat64%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Takes the staring point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point
+given a <code><a href="Haversine.html#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#distance</a></code> factor in <code><a href="Haversine.html#FACTORS">Haversine::FACTORS</a></code>; and <code>bearing</code> in degrees(ranging from -180 to 180).</p>
+<p>https://github.com/Turfjs/turf/blob/master/packages/turf-destination/index.ts</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="destination(coord:Tuple(Number,Number),distance:Number,bearing:Number,unit:Symbol=:kilometers):Tuple(Float64,Float64)-instance-method">
+      <div class="signature">
+        
+        def <strong>destination</strong>(coord : Tuple(<a href="Haversine/Number.html">Number</a>, <a href="Haversine/Number.html">Number</a>), distance : <a href="Haversine/Number.html">Number</a>, bearing : <a href="Haversine/Number.html">Number</a>, unit : Symbol = <span class="n">:kilometers</span>) : Tuple(Float64, Float64)
+
+        <a class="method-permalink" href="#destination%28coord%3ATuple%28Number%2CNumber%29%2Cdistance%3ANumber%2Cbearing%3ANumber%2Cunit%3ASymbol%3D%3Akilometers%29%3ATuple%28Float64%2CFloat64%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Takes the staring point by <code>latitude</code>, <code>longitude</code> and calculates the location of a destination point
+given a <code><a href="Haversine.html#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#distance</a></code> factor in <code><a href="Haversine.html#FACTORS">Haversine::FACTORS</a></code>; and <code>bearing</code> in degrees(ranging from -180 to 180).</p>
+<p>https://github.com/Turfjs/turf/blob/master/packages/turf-destination/index.ts</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance(lat1:Number,lon1:Number,lat2:Number,lon2:Number):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong>(lat1 : <a href="Haversine/Number.html">Number</a>, lon1 : <a href="Haversine/Number.html">Number</a>, lat2 : <a href="Haversine/Number.html">Number</a>, lon2 : <a href="Haversine/Number.html">Number</a>) : <a href="Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#distance%28lat1%3ANumber%2Clon1%3ANumber%2Clat2%3ANumber%2Clon2%3ANumber%29%3AHaversine%3A%3ADistance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculates the haversine distance between two locations using latitude and longitude.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance(coord1:Array(Number),coord2:Array(Number)):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong>(coord1 : Array(<a href="Haversine/Number.html">Number</a>), coord2 : Array(<a href="Haversine/Number.html">Number</a>)) : <a href="Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#distance%28coord1%3AArray%28Number%29%2Ccoord2%3AArray%28Number%29%29%3AHaversine%3A%3ADistance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculates the haversine distance between two locations using latitude and longitude.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="distance(coord1:Tuple(Number,Number),coord2:Tuple(Number,Number)):Haversine::Distance-instance-method">
+      <div class="signature">
+        
+        def <strong>distance</strong>(coord1 : Tuple(<a href="Haversine/Number.html">Number</a>, <a href="Haversine/Number.html">Number</a>), coord2 : Tuple(<a href="Haversine/Number.html">Number</a>, <a href="Haversine/Number.html">Number</a>)) : <a href="Haversine/Distance.html">Haversine::Distance</a>
+
+        <a class="method-permalink" href="#distance%28coord1%3ATuple%28Number%2CNumber%29%2Ccoord2%3ATuple%28Number%2CNumber%29%29%3AHaversine%3A%3ADistance-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Calculates the haversine distance between two locations using latitude and longitude.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>
