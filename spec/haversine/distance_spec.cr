@@ -16,4 +16,12 @@ describe Haversine::Distance do
       end
     end
   end
+
+  describe "operations" do
+    dist1 = Haversine::Distance.new(2)
+    dist2 = Haversine::Distance.new(1)
+
+    it { (dist1 + dist2).distance.should eq(3) }
+    it { (dist1 - dist2).distance.should eq(1) }
+  end
 end
