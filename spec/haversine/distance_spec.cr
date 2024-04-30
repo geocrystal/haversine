@@ -23,5 +23,6 @@ describe Haversine::Distance do
 
     it { (dist1 + dist2).distance.should eq(3) }
     it { (dist1 - dist2).distance.should eq(1) }
+    it { [dist1, dist2].sum.distance.should eq(3) }
   end
 end

@@ -17,6 +17,10 @@ module Haversine
       distance <=> other.distance
     end
 
+    def self.zero : Haversine::Distance
+      new(0)
+    end
+
     # Adds the value of `self` to *other*.
     def +(other : Haversine::Distance) : Haversine::Distance
       Haversine::Distance.new(distance + other.distance)
