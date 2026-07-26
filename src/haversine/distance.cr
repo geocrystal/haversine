@@ -8,8 +8,8 @@ module Haversine
     end
 
     {% for factor in Haversine::FACTORS.keys %}
-      def to_{{factor.id}} : Number
-        @distance * Haversine::FACTORS[:{{factor.id}}]
+      def to_{{ factor.id }} : Number
+        @distance * Haversine::FACTORS[:{{ factor.id }}]
       end
     {% end %}
 
