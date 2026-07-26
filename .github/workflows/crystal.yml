@@ -20,14 +20,10 @@ jobs:
   check_ameba:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Crystal
-        uses: crystal-lang/install-crystal@v1
       - name: Check out repository code
         uses: actions/checkout@v7
-      - name: Install dependencies
-        run: shards install
-      - name: Crystal Ameba Linter
-        run: ./bin/ameba
+      - name: Run Ameba linter
+        uses: crystal-ameba/github-action@master
 
   test:
     strategy:
